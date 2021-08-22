@@ -1,7 +1,7 @@
 # Kelompok_6_Aquamarine
 Tema : Online Seafood Shop
 
-Anggota Kelompok 8 :
+Anggota Kelompok 6 :
 1. Gloria Valerie Lao 	- 535200049
 2. Michelle Augustine 	- 535200055
 3. Tiffany 	            - 535200057
