@@ -1,4 +1,4 @@
-# Kelompok_8_Aquamarine
+# Kelompok_6_Aquamarine
 Tema : Online Seafood Shop
 
 Anggota Kelompok 8 :
