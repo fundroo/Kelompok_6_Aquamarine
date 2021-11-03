@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Hangman Game</title>
+  </head>
+  <body style="background-color: #20663cdd">
+    <div class="container">
+      <h1>Hangman Game</h1>
+      <p>Try to guess the hidden word by typing a letter.</p>
+      <div class="game-box">
+        <svg class="figure">
+          <!-- Stand -->
+          <line x1="25%" y1="5%" x2="65%" y2="5%" />
+          <line x1="65%" y1="5%" x2="65%" y2="20%" />
+          <line x1="25%" y1="5%" x2="25%" y2="95%" />
+          <line x1="5%" y1="95%" x2="45%" y2="95%" />
+
+          <!-- Head -->
+          <circle r="10%" cx="65%" cy="30%" class="body-part" />
+
+          <!-- Body -->
+          <line x1="65%" y1="40%" x2="65%" y2="60%" class="body-part" />
+
+          <!-- Arms -->
+          <line x1="50%" y1="40%" x2="65%" y2="50%" class="body-part" />
+          <line x1="80%" y1="40%" x2="65%" y2="50%" class="body-part" />
+
+          <!-- Legs -->
+          <line x1="65%" y1="60%" x2="80%" y2="70%" class="body-part" />
+          <line x1="65%" y1="60%" x2="50%" y2="70%" class="body-part" />
+        </svg>
+        <div class="content">
+          <ul id="word" class="word"></ul>
+          <div id="incorrect" class="incorrect">
+            <h2>Incorrect :</h2>
+            <p></p>
+          </div>
+          <div id="hint" class="hint">
+            <button
+              type="button"
+              class="btn btn-warning"
+              style="border-radius: 5px"
+            >
+              <h2>Hint</h2>
+            </button>
+          </div>
+          <br /><br />
+          <div class="clue">
+            <p id="clue"><b>Clue :</b></p>
+          </div>
+        </div>
+        <div id="backdrop" class="backdrop"></div>
+        <div id="no-work" class="no-work">
+          <p>This app doesn't work in touch screen devices.</p>
+        </div>
+        <div id="final-msg" class="final-msg">
+          <p id="msg-info" class="msg-info"></p>
+          <button id="play" class="play">Play Again</button>
+        </div>
+        <div id="indication" class="indication">
+          <p>You have already entered this letter</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
