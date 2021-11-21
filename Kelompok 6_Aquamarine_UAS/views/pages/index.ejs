@@ -209,22 +209,23 @@
         ">
         New Recommend!</marquee>
       <div class="box-group active">
-        <% productsIndex.forEach((productIndex)=> { %>
+        <% products.forEach((product) => { %>
+          <% if (product.status == 1) { %>
           <div class="box">
             <div class="slide-product">
-              <img src="<%= productIndex.imagePath %>" alt="1" />
+              <img src="<%= product.imagePath %>" alt="1" />
               <div class="overlay2">
-                <a href="<%= productIndex.link %>" class="tombolliat">See Product</a>
+                <a href="<%= product.link %>" class="tombolliat">See Product</a>
               </div>
             </div>
             <div class="detail-product">
               <div class="type">
-                <a href="<%= productIndex.link %>">
-                  <%= productIndex.name %>
+                <a href="<%= product.link %>">
+                  <%= product.name %>
                 </a>
                 <span>Recommended</span>
               </div>
-              <a href="<%= productIndex.link %>" class="harga">Rp <%= productIndex.price %>/kg</a>
+              <a href="<%= product.link %>" class="harga">Rp <%= product.price %>/kg</a>
             </div>
           </div>
 
@@ -237,6 +238,7 @@
               <div class="col-md-12"></div>
             </div>
           </div>
+          <% } %>
           <% }) %>
       </div>
 

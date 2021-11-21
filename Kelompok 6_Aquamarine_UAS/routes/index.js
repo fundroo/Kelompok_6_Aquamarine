@@ -1,6 +1,6 @@
 const express = require("express");
 const Product = require("../models/product");
-const ProductIndex = require("../models/proindex");
+const ProductIndex = require("../models/product");
 const Wishlist = require("../models/wishlist");
 const Cart = require("../models/cart");
 const router = express.Router();
@@ -8,13 +8,26 @@ const router = express.Router();
 // Pemanggilan database yang dipakai di product Index
 router.get("/", async (req, res) => {
   var data = await ProductIndex.find();
-  res.render("pages/index", { productsIndex: data });
+  res.render("pages/index", { products: data });
 });
 
 // Pemanggilan Database yang dipakai di Product List
 router.get("/productlist", async (req, res) => {
   var data = await Product.find();
   res.render("pages/productlist", { products: data });
+});
+
+router.get("/addpro", (req, res) => {
+  res.render("pages/addpro");
+});
+
+// Pemanggilan Database yang dipakai di Dashboard
+router.get("/dashboard", async (req, res) => {
+  var data = await Product.find();
+  res.render("pages/dashboard", {
+    products: data,
+    message: req.flash("message"),
+  });
 });
 
 router.get("/changepass", (req, res) => {
@@ -27,6 +40,12 @@ router.get("/checkout", (req, res) => {
 
 router.get("/crab", (req, res) => {
   res.render("pages/crab");
+});
+
+// Pemanggilan Database yang dipakai di Edit data
+router.get("/editpro", async (req, res) => {
+  var data = await Product.find();
+  res.render("pages/editpro", { products: data });
 });
 
 router.get("/editmyprofile", (req, res) => {
@@ -108,18 +127,14 @@ router.get("/add-to-wishlist/:id", (req, res) => {
     req.session.wishlist ? req.session.wishlist : {}
   );
 
-  if (req.session.isLoggedIn == true) {
-    Product.findById(productId, function (err, product) {
-      if (err) {
-        return res.redirect("/productlist");
-      }
-      wishlist.add(product, product.id);
-      req.session.wishlist = wishlist;
-      res.redirect("/productlist");
-    });
-  } else {
-    res.redirect("/login");
-  }
+  Product.findById(productId, function (err, product) {
+    if (err) {
+      return res.redirect("/productlist");
+    }
+    wishlist.add(product, product.id);
+    req.session.wishlist = wishlist;
+    res.redirect("/productlist");
+  });
 });
 
 // Menambahkan Produk yang diinginkan ke dalam Cart dari Page Product List
@@ -127,19 +142,15 @@ router.get("/add-to-cart/:id", (req, res, next) => {
   const productId = req.params.id;
   const cart = new Cart(req.session.cart ? req.session.cart : {});
 
-  if (req.session.isLoggedIn == true) {
-    Product.findById(productId, function (err, product) {
-      if (err) {
-        return res.redirect("/productlist");
-      }
-      cart.add(product, product.id);
-      req.session.cart = cart;
-      console.log(req.session.cart);
-      res.redirect("/productlist");
-    });
-  } else {
-    res.redirect("/login");
-  }
+  Product.findById(productId, function (err, product) {
+    if (err) {
+      return res.redirect("/productlist");
+    }
+    cart.add(product, product.id);
+    req.session.cart = cart;
+    console.log(req.session.cart);
+    res.redirect("/productlist");
+  });
 });
 
 module.exports = router;

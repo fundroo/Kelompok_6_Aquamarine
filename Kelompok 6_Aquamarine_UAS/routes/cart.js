@@ -4,7 +4,7 @@ const Cart = require("../models/cart");
 const Wishlist = require("../models/wishlist");
 const Product = require("../models/product");
 
-// Pemanggilan wishlist
+// Pemanggilan cart
 router.get("/", function(req, res, next) {
     if (!req.session.cart) {
         return res.render("pages/cart", { products: 0 });

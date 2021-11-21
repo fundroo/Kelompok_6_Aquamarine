@@ -1,6 +1,7 @@
-const express = require("express"); 
+const express = require("express");
 const bodyParser = require("body-parser");
 const session = require("express-session");
+const flash = require("connect-flash");
 const mongoose = require("mongoose");
 const app = express();
 
@@ -11,10 +12,14 @@ app.use(bodyParser.json());
 
 app.use(
   session({
-    secret: "some_secret_key",
-    cookie: {},
+    cookie: { maxAge: 6000 },
+    secret: "secret",
+    resave: true,
+    saveUninitialized: true,
   })
 );
+
+app.use(flash());
 
 // Middleware untuk memetakan permintaan
 app.use((req, res, next) => {
@@ -39,13 +44,16 @@ const indexRouter = require("./routes/index");
 const userRouter = require("./routes/user");
 const cartRouter = require("./routes/cart");
 const wishlistRouter = require("./routes/wishlist");
+const productRouter = require("./routes/product");
 
 app.use("/", indexRouter);
 app.use("/user", userRouter);
 app.use("/cart", cartRouter);
 app.use("/wishlist", wishlistRouter);
+app.use("/product", productRouter);
 
 // Port untuk localhost
-app.listen("3000", () => {
-  console.log("Server sudah berjalan di port 3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server sudah berjalan di port ${PORT}`);
 });

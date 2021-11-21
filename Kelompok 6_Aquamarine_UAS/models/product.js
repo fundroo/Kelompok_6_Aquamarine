@@ -18,6 +18,10 @@ const productSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
+  status: {
+    type: Number,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Product", productSchema, "productlist");
