@@ -1,0 +1,74 @@
+Kelompok 6 :
+1. Fundroo Orlando		- 535200074
+2. Gloria Valerie Lao		- 535200049
+3. Michelle Augustine		- 535200055
+4. Tiffany			- 535200057
+5. Stevenson Tjuaca		- 535200067
+
+Topik Application 			: Fresh Seafood Retail Shop
+Link URL Github 			: https://github.com/fundroo/Kelompok_6_Aquamarine 
+Link URL project yang sudah Live 	: https://aquamarinefresh.herokuapp.com/ 
+Link video demo Application		: https://drive.google.com/file/d/1v4fKIFVx5W8gXvata5wg_IVuPf0B19-U/view?usp=sharing
+
+Deskripsi tugas dari setiap anggota kelompok :
+1. Fundroo Orlando		- 535200074
+•	Memperbaiki Front End Aplikasi
+•	Menambahkan fitur yang diperlukan terhadap Front End Aplikasi
+•	Mengubah pages dari .html menjadi .ejs
+•	Menambahkan Back End Aplikasi
+•	Membuat Front End Aplikasi yang baru (yang perlu ditambahkan)
+•	Melakukan testing pada Cloud Database di MongoDB
+•	Melakukan Live Share pada VS Code untuk bekerja bersama
+•	Selalu Berpartisipasi dalam Live Share
+
+2. Gloria Valerie Lao		- 535200049
+•	Memperbaiki Front End Aplikasi
+•	Menambahkan fitur yang diperlukan terhadap Front End Aplikasi
+•	Mengubah pages dari .html menjadi .ejs
+•	Menambahkan Back End Aplikasi
+•	Membuat Front End Aplikasi yang baru (yang perlu ditambahkan)
+•	Melakukan testing pada Cloud Database di MongoDB
+•	Membuat Organization Project pada MongoDB
+•	Melakukan Live Share pada VS Code untuk bekerja bersama
+•	Selalu Berpartisipasi dalam Live Share
+
+3. Michelle Augustine		- 535200055
+•	Memperbaiki Front End Aplikasi
+•	Menambahkan fitur yang diperlukan terhadap Front End Aplikasi
+•	Mengubah pages dari .html menjadi .ejs
+•	Menambahkan Back End Aplikasi
+•	Membuat Front End Aplikasi yang baru (yang perlu ditambahkan)
+•	Melakukan testing pada Cloud Database di MongoDB
+•	Melakukan push ke Github dan deploy Heroku
+•	Melakukan Live Share pada VS Code untuk bekerja bersama
+•	Selalu Berpartisipasi dalam Live Share
+
+4. Tiffany			- 535200057
+•	Memperbaiki Front End Aplikasi
+•	Menambahkan fitur yang diperlukan terhadap Front End Aplikasi
+•	Mengubah pages dari .html menjadi .ejs
+•	Menambahkan Back End Aplikasi
+•	Membuat Front End Aplikasi yang baru (yang perlu ditambahkan)
+•	Melakukan testing pada Cloud Database di MongoDB
+•	Melakukan Live Share pada VS Code untuk bekerja bersama
+•	Selalu Berpartisipasi dalam Live Share
+
+5. Stevenson Tjuaca		- 535200067
+•	Memperbaiki Front End Aplikasi
+•	Menambahkan fitur yang diperlukan terhadap Front End Aplikasi
+•	Mengubah pages dari .html menjadi .ejs
+•	Menambahkan Back End Aplikasi
+•	Membuat Front End Aplikasi yang baru (yang perlu ditambahkan)
+•	Melakukan testing pada Cloud Database di MongoDB
+•	Melakukan Editing Video Demo
+•	Selalu Berpartisipasi dalam Live Share
+
+Secara kesimpulan, kelompok kami mengerjakan project ini selalu secara bersama-sama. Kami menentukan waktu untuk mengerjakannya bersama-sama, melakukan Live Share dalam aplikasi VS Code dan kami melangsungkan kinerja tersebut bersamaan sekaligus mendiskusikan apa problem yang kami sedang hadapi bersama-sama di dalam aplikasi Discord untuk berdiskusi secara langsung. Kami juga saling melengkapi ketika salah satu dari kami tidak memahami sedangkan yang lain memahami semua, kami pun menjelaskan bahwa fungsional dari function tersebut, dan semacamnya. Kami pun kompak untuk melakukan research baik informasi, fungsi, dan sebagainya untuk mengisi kekurangan yang kami hadapi selama membuat project ini.
+
+Informasi Login ke aplikasi yang dibuat untuk testing/penilaian
+1.	Sebagai user : 
+•	Username 	: fundroo
+•	Password 	: fundroo31
+2.	Sebagai admin :
+•	Username 	: admin
+•	Password 	: 12345
